@@ -10,7 +10,6 @@ response = requests.get(
 soup = BeautifulSoup(response.content, 'html.parser')
 
 #finding element by the IDtag using soup
-
-
-print(response.status_code)
+title = soup.find(id="firstHeading")
+print(title.string)
 
