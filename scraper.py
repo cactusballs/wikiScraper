@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import random
 
 #getting the response from the desired webste 
 response = requests.get(
@@ -10,6 +11,10 @@ response = requests.get(
 soup = BeautifulSoup(response.content, 'html.parser')
 
 #finding element by the IDtag using soup
+#this one is finding the first heading
 title = soup.find(id="firstHeading")
-print(title.string)
+print(title.content)
+
+#getting all of the links 
+
 
