@@ -23,4 +23,8 @@ linkToScrape = 0
 for link in allLinks:
   if link['href'].find("/wiki/") == -1:
     continue 
-  
+
+  linkToScrape = link
+  break
+
+print(linkToScrape)
