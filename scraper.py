@@ -18,4 +18,9 @@ print(title.content)
 #getting all of the links 
 allLinks = soup.find(id="bodyContent").find_all("a")
 random.shuffle(allLinks)
+linkToScrape = 0 
 
+for link in allLinks:
+  if link['href'].find("/wiki/") == -1:
+    continue 
+  
