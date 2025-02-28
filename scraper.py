@@ -16,5 +16,6 @@ title = soup.find(id="firstHeading")
 print(title.content)
 
 #getting all of the links 
-
+allLinks = soup.find(id="bodyContent").find_all("a")
+random.shuffle(allLinks)
 
